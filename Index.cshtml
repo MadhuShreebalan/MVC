@@ -1,0 +1,43 @@
+﻿@model Account.Entity.Data
+
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <style>
+        .head2 {
+            margin-left: 38%;
+        }
+
+        table {
+            border-bottom-color: black;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<h2 class="head2">Login</h2>
+
+<form>
+    <table color="rgb(194, 74, 172)" ; cellpadding=5; align="center" ;>
+        <tr>
+            <td>
+                <b> Name</b>
+            </td>
+            <td>@Html.TextBoxFor(Model => Model.Name)
+            <td>
+        </tr>
+        <tr>
+            <td>
+                <b>Password</b>
+            </td>
+            <td>@Html.TextBoxFor(Model => Model.Password)
+            <td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit">
+            </td>
+        </tr>
+    </table>
+</form>
+

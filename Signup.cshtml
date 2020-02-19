@@ -1,0 +1,110 @@
+﻿@model Account.Entity.Data
+
+@{
+    ViewBag.Title = "Signup";
+}
+
+<head>
+    <style>
+        .head1 {
+           margin-left:38%;
+        }
+        table {
+            border-bottom-color: black;
+            background-color:aquamarine;
+      
+        }
+    </style>
+</head>
+
+<h2 class="head1" >Signup </h2>
+
+<form>
+    
+      
+        <table align ="center">
+
+            <tr bordercolor="black">
+                <td>
+                    <b> Name</b>
+                </td>
+                <td>@Html.TextBoxFor(Model => Model.Name)
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dob"><b> dob</b></label></tb>
+                <td>
+                    @Html.DropDownList("date", new List<SelectListItem> {
+               new SelectListItem { Text= "01", Value = "01" },
+               new SelectListItem { Text= "02", Value = "02" },
+               new SelectListItem { Text= "03", Value = "03" },
+               new SelectListItem { Text= "04", Value = "04" },
+               new SelectListItem { Text= "05", Value = "05" },
+               new SelectListItem { Text= "06", Value = "06" },
+               new SelectListItem { Text= "07", Value = "07" },
+               }
+               )
+
+                    @Html.DropDownList("month", new List<SelectListItem> {
+              new SelectListItem { Text= "01", Value = "01" },
+              new SelectListItem { Text= "02", Value = "02" },
+              new SelectListItem { Text= "03", Value = "03" },
+              new SelectListItem { Text= "04", Value = "04" },
+              new SelectListItem { Text= "05", Value = "05" },
+              new SelectListItem { Text= "06", Value = "06" },
+              new SelectListItem { Text= "07", Value = "07" },
+              }
+              )
+
+                    @Html.DropDownList("year", new List<SelectListItem> {
+              new SelectListItem { Text= "1998", Value = "01" },
+              new SelectListItem { Text= "1999", Value = "02" },
+              new SelectListItem { Text= "2000", Value = "03" },
+              new SelectListItem { Text= "2001", Value = "04" },
+              new SelectListItem { Text= "2002", Value = "05" },
+              new SelectListItem { Text= "2003", Value = "06" },
+
+              }
+              )
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Gender</b>
+                </td>
+                <td>
+
+                    Male:   @Html.RadioButton("Gender", "Male")
+                    Female:   @Html.RadioButton("Gender", "Female")
+                    Others:   @Html.RadioButton("Gender", "Others")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Password</b>
+                </td>
+                <td>@Html.TextBoxFor(Model => Model.Password)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Email</b>
+                </td>
+                <td>@Html.TextBoxFor(Model => Model.Email)
+                <td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Phone</b>
+                </td>
+                <td>@Html.TextBoxFor(Model => Model.Phone)
+                </td>
+            </tr>
+            <tr>
+                <td   colspan="3" align="center">
+                    <input type="submit"  >
+                </td>
+            </tr>
+        </table>
+
+</form>
