@@ -1,0 +1,8 @@
+Assignment[20-FEB-2020]:
+
+Update Model and Try Update Model:
+ UpdateModel() function inspects all the HttpRequest inputs such as posted From data, QueryString, Cookies and server variables and the populate the model object.
+
+ UpdateModel()  throws an exception if validation fails, whereas TryUpdateModel() will  never throws an exception.
+
+ Similarity Both are used to update model with form values and perform validations
